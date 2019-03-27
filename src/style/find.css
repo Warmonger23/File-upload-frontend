@@ -1,0 +1,112 @@
+.content {
+  margin-left: 30%;
+  /* margin-right: 20%; */
+  margin-top: 6%;
+}
+/* 
+.input {
+  margin-top: 3%;
+  size: 20px;
+} */
+
+.searchButton {
+  margin-left: 4%;
+}
+
+.tableShow {
+  margin-top: 2%;
+  margin-right: 45%;
+}
+
+.redContent {
+  background-color: red;
+}
+
+.centreContent {
+  margin-top: 15%;
+  margin-bottom: 20%;
+  margin-left: 28%;
+  margin-right: 10%;
+}
+
+.centreContent#home {
+  margin-top: 15%;
+  margin-bottom: 20%;
+  margin-left: 13%;
+  margin-right: 10%;
+}
+
+.centreContent#home, .multi {
+  margin-top: 1%;
+}
+.centreContent#home, .top {
+  margin-top: 4%;
+}
+
+
+.input1 {
+  margin-right: 4%;
+}
+
+.auth {
+  margin-top: 15%;
+  margin-bottom: 20%;
+  margin-left: 36%;
+  margin-right: 10%;
+  background-color: lightblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.auth1 {
+  background-color: lightblue; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  /* margin-left: 45%;
+  margin-top: 20%; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+
+.percentBar {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.forgotPassword {
+  margin-top: 3%;
+  margin-left: 21%;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
