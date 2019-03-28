@@ -26,15 +26,15 @@ class Reset extends Component {
 
     render() {
         let content = (
-            <div id="resetContainer">
+            <div>
                 <input
-                    className="input"
+                    className="input1"
                     id="uname"
                     type="text"
                     placeholder="User Name"
                 />
                 <input
-                    className="input"
+                    className="input2"
                     id="pwd"
                     type="password"
                     placeholder="Password"
@@ -47,15 +47,6 @@ class Reset extends Component {
                 >
                     Reset
                 </MDBBtn>
-                <br />
-                <br />
-                <MDBBtn
-                    onClick={this.gotoSignIn}
-                    color="info"
-                    size="m"
-                >
-                    Go to Sign In
-                </MDBBtn>
             </div>
         )
         let result;
@@ -63,7 +54,7 @@ class Reset extends Component {
             if (this.state.success) {
                 result = (
                     <div>{content}
-                        <div style={{ color: "green" }}>
+                        <div style={{ color: "green", padding: 5 }}>
                             {this.state.message}
                         </div>
                     </div>
@@ -79,8 +70,16 @@ class Reset extends Component {
             }
         } else result = content;
         return (
-            <div>
+            <div className="resetContainer">
                 {result}
+                <br />
+                <MDBBtn
+                    onClick={this.gotoSignIn}
+                    color="info"
+                    size="m"
+                >
+                    Go to Sign In
+                </MDBBtn>
             </div>
         )
     }
