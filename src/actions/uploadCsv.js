@@ -2,17 +2,19 @@ import axios from "axios";
 
 let uploadcsv = function (data) {
   return new Promise((resolve, reject) => {
-    const formData = new FormData();
+    let formData = new FormData();
     for (let i = 0; i < data.length; i++) {
       console.log("CSV = ", data[i]);
-      formData.append("csv" + i, data[i]);
+      let key = "csv" + i;
+      formData.append(key, data[i]);
     }
-    console.log("Form adta", formData[0]);
+    console.log("Form adta", formData);
     axios({
-      method: "post",
       url: `http://localhost:3020/file`,
+      method: "post",
       headers: {},
-      data: formData
+      data: formData,
+      withCredentials: true
     }).then(res => {
       resolve(res);
     }).catch(err => {

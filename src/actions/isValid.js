@@ -5,8 +5,6 @@ let isValid = function () {
         axios({
             method: "get",
             url: `http://localhost:3020/validUser`,
-            headers: {
-            },
             withCredentials: true
         }).then(res => {
             if (res.data.data === "User is authorized")

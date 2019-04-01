@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import reset from "../actions/reset"
 import { MDBBtn } from "mdbreact"
-
+// import "../style/reset";
 
 class Reset extends Component {
     state = { message: null, success: null };

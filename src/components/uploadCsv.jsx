@@ -33,7 +33,7 @@ class UploadCsv extends Component {
 
   importCSV = event => {
     console.log("Inside importCsv", event.target.value);
-
+    
     const { csvfile } = this.state;
     uploadcsv(csvfile).then((res) => {
       alert("Upload successful");

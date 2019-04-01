@@ -11,7 +11,7 @@ let uploadVideo = (data) => {
             url: `http://localhost:3020/video`,
             headers: {},
             data: formData,
-            onUploadProgress: progressEvent => console.log(progressEvent.loaded)
+            withCredentials: true
         }).then(res => {
             resolve(res);
         }).catch(err => {
