@@ -3,6 +3,7 @@ import uploadImage from "../actions/uploadImage";
 import "../style/find.css";
 import { MDBBtn } from "mdbreact";
 import isValid from "../actions/isValid";
+import SignOut from "../components/signout";
 
 class UploadImage extends Component {
     constructor() {
@@ -65,6 +66,7 @@ class UploadImage extends Component {
                         accept="image/*"
                         multiple
                     />
+                    <SignOut></SignOut>
                     <br />
                     <br />
                     <MDBBtn onClick={this.importImage} color="info">

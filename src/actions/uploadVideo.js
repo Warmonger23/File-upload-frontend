@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let uploadVideo = (data) => {
+let uploadVideo = function (data) {
     return new Promise((resolve, reject) => {
         const formData = new FormData();
         for (let i = 0; i < data.length; i++) {
@@ -9,7 +9,6 @@ let uploadVideo = (data) => {
         axios({
             method: "post",
             url: `http://localhost:3020/video`,
-            headers: {},
             data: formData,
             withCredentials: true
         }).then(res => {

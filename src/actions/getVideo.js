@@ -5,7 +5,7 @@ let getVideo = function () {
     return new Promise((resolve, reject) => {
         axios({
             method: "get",
-            url: `http://localhost:3020/video`,
+            url: `http://localhost:3020/video/listall`,
             headers: {
             },
             withCredentials: true

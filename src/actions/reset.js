@@ -6,7 +6,8 @@ let reset = function (data) {
             method: "post",
             url: `http://localhost:3020/reset`,
             headers: {},
-            data: data
+            data: data,
+            withCredentials: true
         }).then(res => {
             resolve(res);
         }).catch(err => {

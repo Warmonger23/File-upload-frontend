@@ -3,6 +3,8 @@ import "../style/find.css";
 import { MDBBtn } from "mdbreact";
 import isValid from "../actions/isValid";
 import axios from "axios";
+import SignOut from "../components/signout";
+import SearchContent from "../components/searchContent";
 
 
 class Home extends Component {
@@ -10,7 +12,7 @@ class Home extends Component {
 
   componentWillMount() {
     console.log("Component mounts");
-    
+
     isValid().then(data => {
       console.log("inside then of home");
       this.setState({ loggedIn: true });
@@ -104,39 +106,34 @@ class Home extends Component {
           </div>
           <div className="multi">
 
-          <MDBBtn
-            onClick={this.showUploadedImages}
-            color="info"
-            size="m"
-            className="searchButton"
-            >
-            Show Uploaded Images
-        </MDBBtn>
-          <MDBBtn
-            onClick={this.showUploadedVideos}
-            color="info"
-            size="m"
-            className="searchButton"
-            >
-            Show Uploaded Videos
-        </MDBBtn>
-          </div>
-          <div className="multi">
-
             <MDBBtn
-              onClick={this.signOut}
+              onClick={this.showUploadedImages}
               color="info"
               size="m"
               className="searchButton"
             >
-              Sign Out
-            </MDBBtn>
+              Show Uploaded Images
+        </MDBBtn>
+            <MDBBtn
+              onClick={this.showUploadedVideos}
+              color="info"
+              size="m"
+              className="searchButton"
+            >
+              Show Uploaded Videos
+        </MDBBtn>
+          </div>
+          <div className="multi">
+            <SignOut></SignOut>
           </div>
         </div>
       );
     }
     return (
       <div className="centreContent" id="home">
+      <div>
+        <SearchContent></SearchContent>
+      </div>
         {content}
       </div>
     );

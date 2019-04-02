@@ -4,7 +4,7 @@ let getFile = function () {
     return new Promise((resolve, reject) => {
         axios({
             method: "get",
-            url: `http://localhost:3020/file`,
+            url: `http://localhost:3020/file/listall`,
             headers: {
             },
             withCredentials: true

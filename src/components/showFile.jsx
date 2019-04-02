@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../style/find.css";
 import getFile from "../actions/getFile";
 import isValid from "../actions/isValid";
+import SignOut from "../components/signout";
 
 class ShowFile extends Component {
     state = { list: null, loggedIn: false };
@@ -39,9 +40,24 @@ class ShowFile extends Component {
                 content = <h1>No files uploaded yet!</h1>
             }
         }
-        return <div className="centreContent">  
-            {content}
-        </div>
+        return (
+            <div>
+                <table className="centreContentTable">
+                    <tr>
+                        <th>
+                            <div>
+                                {content}
+                            </div>
+                        </th>
+                        <th>
+                            <div>
+                                <SignOut></SignOut>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        )
     }
 }
 

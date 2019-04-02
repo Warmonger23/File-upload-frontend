@@ -65,12 +65,11 @@ class UploadVideo extends Component {
         axios({
             method: "post",
             url: `http://localhost:3020/video`,
-            headers: {},
             data: formData,
+            withCredentials: true,
             onUploadProgress: progressEvent => {
                 console.log("This much done", progressEvent.loaded);
                 console.log("progress", Math.round(((totalSize - progressEvent.loaded) / totalSize) * 100));
-
                 this.setState({
                     progressBar: 100 - Math.round(((totalSize - progressEvent.loaded) / totalSize) * 100)
                 });
@@ -112,7 +111,7 @@ class UploadVideo extends Component {
                     <MDBBtn onClick={this.importVideo} color="info">
                         Upload!
                     </MDBBtn>
-                    <div>{this.state.progressBar}</div>
+                    {/* <div>{this.state.progressBar}</div> */}
                 </div>
             );
         } else {

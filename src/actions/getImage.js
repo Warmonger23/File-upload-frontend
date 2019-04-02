@@ -4,7 +4,7 @@ let getImage = function () {
     return new Promise((resolve, reject) => {
         axios({
             method: "get",
-            url: `http://localhost:3020/image`,
+            url: `http://localhost:3020/image/listall`,
             headers: {
             },
             withCredentials: true
