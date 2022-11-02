@@ -1,4 +1,4 @@
-A test project for working on my REACT skills. It has a basic UI for logging users and uploading files from their local device to a server 
+A test project for working on my REACT skills. It has a basic UI for user login and uploading files from their local device to a server 
 
 In the project directory, you can run:
 
